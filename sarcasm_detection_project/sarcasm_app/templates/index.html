@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sarcasm Detector</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🤖 Sarcasm Detector</h1>
+
+    <form method="post" action="{% url 'result' %}">
+        {% csrf_token %}
+
+        <textarea name="text" placeholder="Enter text here..." rows="4" required></textarea>
+
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+</body>
+</html>

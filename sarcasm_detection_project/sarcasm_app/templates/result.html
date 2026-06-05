@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Prediction Result</h1>
+
+    <p><strong>Input:</strong> {{ text }}</p>
+
+    <div class="result-box {% if prediction == 'Sarcastic' %}sarcastic{% else %}not-sarcastic{% endif %}">
+        <h2>{{ prediction }}</h2>
+        <p>Confidence: {{ confidence }}%</p>
+    </div>
+
+    <a href="{% url 'home' %}">🔁 Try Again</a>
+</div>
+
+</body>
+</html>
