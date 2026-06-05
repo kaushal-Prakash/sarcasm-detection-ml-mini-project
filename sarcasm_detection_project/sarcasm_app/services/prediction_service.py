@@ -1,5 +1,6 @@
 from ..ml.predictor import SarcasmPredictor
 
+# Prediction Service with Emoji Strategy
 class PredictionService:
 
     def __init__(self):
