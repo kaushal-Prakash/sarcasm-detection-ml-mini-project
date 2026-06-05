@@ -5,7 +5,7 @@ output_file = "dataset/fixed_dataset.json"
 
 with open(input_file, "r", encoding="utf-8") as f_in, open(output_file, "w", encoding="utf-8") as f_out:
     for line in f_in:
-        line = line.strip()
+        line = line.strip() # Remove leading/trailing whitespace
 
         # remove trailing comma if exists
         if line.endswith(","):
