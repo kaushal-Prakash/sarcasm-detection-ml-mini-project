@@ -25,7 +25,7 @@ def load_data(path):
 def train():
     texts, labels = load_data("dataset/sarcasm_dataset.jsonl")
 
-    vectorizer = TfidfVectorizer(stop_words='english')
+    vectorizer = TfidfVectorizer(stop_words='english') # Add stop words removal
     X = vectorizer.fit_transform(texts)
 
     model = LogisticRegression(max_iter=1000)

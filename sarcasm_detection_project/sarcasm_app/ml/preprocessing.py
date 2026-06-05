@@ -17,7 +17,7 @@ def extract_emojis(text):
         "]+",
         flags=re.UNICODE
     )
-    return emoji_pattern.findall(text)
+    return emoji_pattern.findall(text) # Returns a list of emojis found in the text
 
 
 def preprocess_text(text):

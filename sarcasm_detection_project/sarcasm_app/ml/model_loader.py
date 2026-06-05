@@ -20,4 +20,4 @@ class ModelLoader:
 
             cls._instance = instance
 
-        return cls._instance
+        return cls._instance # Singleton instance returned
